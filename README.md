@@ -40,15 +40,10 @@ MAGE-V-Pro/
 
 Dermatology presents unique diagnostic challenges:
 
-* 
 **Inter-class similarity:** Visually similar lesions may represent different diseases.
 
-
-* 
 **Intra-class variability:** The same disease can appear differently across patients.
 
-
-* 
 **Context dependency:** Clinical diagnosis relies on both visual examination and patient history.
 
 
@@ -59,15 +54,10 @@ Purely vision-based models ignore the rich semantic information clinicians use. 
 
 This study utilizes publicly available datasets to ensure reproducibility.
 
-* 
 **Source:** [DermNet Dataset](https://www.kaggle.com/datasets/shubhamgoel27/dermnet) 
 
-
-* 
 **Classes (7):** Acne, Psoriasis, Eczema, STDs, Fungal Infections, Basal Cell Carcinoma (BCC), Seborrheic Keratosis.
 
-
-* 
 **Text Modality:** Patient-style clinical descriptions generated via Gemini LLM (validated for clinical accuracy) to simulate real-world narratives without privacy risks.
 
 
@@ -93,12 +83,8 @@ MAGE-V-Pro employs a two-stage training strategy combining three core modules:
 * 
 **Vision Encoder:** **DINOv2 (ViT-S/14)** self-supervised Vision Transformer (384-dim embeddings).
 
-
-* 
 **Text Encoder:** **PubMedBERT** optimized using **LoRA** (Low-Rank Adaptation) for parameter efficiency.
 
-
-* 
 **Fusion Module (FiLM):** Conditions visual features on textual context using:
 
 
@@ -114,8 +100,6 @@ MAGE-V-Pro employs a two-stage training strategy combining three core modules:
 * 
 **Stage 2 (Multimodal Fine-Tuning):** Integrating vision and text encoders with FiLM fusion (30 epochs).
 
-
-* 
 **RAG Fallback:** A **Confidence-Based Retrieval-Augmented Generation** mechanism activates when prediction confidence is < 0.6.
 
 
@@ -138,8 +122,6 @@ The multimodal approach significantly outperforms the vision-only baseline.
 * 
 **Resolves Ambiguity:** Effectively distinguishes morphologically similar conditions (e.g., BCC vs. Seborrheic Keratosis).
 
-
-* 
 **Improved Localization:** Grad-CAM visualizations show more focused attention on diagnostically relevant lesion features.
 
 
@@ -207,3 +189,4 @@ For questions or collaboration inquiries:
 ---
 
 Note: This paper is accepted for publication in **Procedia Computer Science** (Elsevier) at the **Eighth International Conference on Future Trends in Networking and Computing Technologies (FTNCT-08)**. See `Presenter Certificate - FTNCT'08.pdf` for verification.
+
