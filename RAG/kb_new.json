@@ -1,0 +1,479 @@
+
+{
+  "dermatology_knowledge_base": [
+    {
+      "disease": "1. Acne",
+      "synonyms": ["Acne Vulgaris", "Rosacea", "Acne Rosacea", "Comedonal Acne", "Papulopustular Acne", "Nodulocystic Acne"],
+      "icd11": ["ED80.0 - Acne vulgaris", "ED71.0 - Rosacea"],
+      "lesion_morphology": {
+        "primary": ["Comedone (open/closed)", "Papule", "Pustule", "Nodule", "Cyst", "Persistent Erythema", "Telangiectasia"],
+        "secondary": ["Post-inflammatory hyperpigmentation (PIH)", "Erythema", "Atrophic scarring (ice-pick, boxcar)", "Hypertrophic scarring"],
+        "border": "Generally well-demarcated individual lesions; background erythema in Rosacea is diffuse.",
+        "texture": "Varies from smooth (closed comedones) to bumpy/inflamed (papules/pustules) and firm (nodules).",
+        "key_distinctions": "Presence of comedones is pathognomonic for Acne Vulgaris. Absence of comedones with persistent central facial erythema and telangiectasias is key for Rosacea."
+      },
+      "colors": [
+        {"hex": "#2C2C2C", "description": "Open comedones (blackheads)"},
+        {"hex": "#F5F5DC", "description": "Closed comedones (whiteheads)"}, 
+        {"hex": "#E53E3E", "description": "Inflammatory papules/background erythema"},
+        {"hex": "#FFD93D", "description": "Pustular heads"},
+        {"hex": "#8B4513", "description": "Post-inflammatory hyperpigmentation"}
+      ],
+      "body_map": {
+        "face_t_zone": 90,
+        "face_central_cheeks_nose": 85,
+        "back": 60,
+        "chest": 50,
+        "shoulders": 40
+      },
+      "visual_cues": {
+        "distribution": "Sebaceous gland areas (face, chest, back) for Acne Vulgaris; central facial for Rosacea.",
+        "pattern": "Polymorphic lesions (multiple types at once) are common in Acne Vulgaris.",
+        "special_signs": "Flushing and blushing history is a strong indicator for Rosacea."
+      },
+      "demographics": {
+        "age_peak": "Bimodal: 12-25 years (Acne Vulgaris), 30-60 years (Rosacea)",
+        "sex_ratio": "M:F ≈ 1:1 in teens; F > M in adult acne and Rosacea."
+      },
+      "time_dynamics": {
+        "onset": "Chronic with flares. Acne Vulgaris often starts at puberty. Rosacea often starts in adulthood.",
+        "seasonality": "Acne Vulgaris can worsen in winter. Rosacea is often triggered by sun/heat."
+      },
+      "triggers": ["Hormonal shifts (puberty, menses)", "Stress", "Occlusive products", "High glycemic diet", "Sun exposure (Rosacea)", "Spicy food (Rosacea)", "Alcohol (Rosacea)"],
+      "red_flags": ["Acne fulminans (severe, ulcerative, with fever/systemic symptoms)", "Sudden adult onset (may indicate underlying endocrine issue)", "Rhinophyma or ocular symptoms (Rosacea)"],
+      "confounder_questions": [
+        {
+          "question": "Are there blackheads or whiteheads (comedones) present?",
+          "pairs_with": "Rosacea",
+          "yes_supports": "Acne",
+          "no_supports": "Rosacea"
+        },
+        {
+          "question": "Is the redness persistent in the central face and do you flush easily?",
+          "pairs_with": "Acne",
+          "yes_supports": "Rosacea",
+          "no_supports": "Acne"
+        },
+        {
+          "question": "Is the rash very itchy and composed of uniform small bumps, mainly on the chest and back?",
+          "pairs_with": "Fungal Acne (Pityrosporum Folliculitis)",
+          "yes_supports": "Fungal Acne (Pityrosporum Folliculitis)",
+          "no_supports": "Acne"
+        }
+      ],
+      "differential": [
+        {"disease": "Fungal Acne (Pityrosporum Folliculitis)", "distinguishing_feature": "Monomorphic, itchy papules/pustules, no comedones, often on chest/back."},
+        {"disease": "Perioral Dermatitis", "distinguishing_feature": "Papules clustered around mouth/nose, sparing the vermilion border."},
+        {"disease": "Eczema", "distinguishing_feature": "Ill-defined borders, significant itch, often in flexural areas."}
+      ],
+      "reference_images": {
+        "dermnet": ["https://dermnetnz.org/topics/acne-vulgaris", "https://dermnetnz.org/topics/rosacea"],
+        "kaggle_dataset": "Acne and Rosacea Photos"
+      }
+    },
+    {
+      "disease": "2. Psoriasis",
+      "synonyms": ["Psoriasis Vulgaris", "Plaque Psoriasis", "Lichen Planus (LP)", "Papulosquamous disorder"],
+      "icd11": ["EA90.0 - Plaque psoriasis", "EB60 - Lichen planus"],
+      "lesion_morphology": {
+        "primary": ["Plaque with scale", "Papule"],
+        "secondary": ["Fissuring", "Lichenification", "Excoriation", "Post-inflammatory hyper/hypopigmentation"],
+        "border": "Sharply demarcated (Psoriasis); well-defined (Lichen Planus).",
+        "texture": "Thick, silvery-white scale on an erythematous base (Psoriasis); smooth, flat-topped with fine white lines (LP).",
+        "key_distinctions": "Psoriasis: Erythematous plaques with silvery scale on extensor surfaces. Lichen Planus: Violaceous, polygonal, pruritic papules (4 P's) on flexural surfaces with Wickham's striae (fine white reticular lines)."
+      },
+      "colors": [
+        {"hex": "#D92D20", "description": "Erythematous base of psoriasis plaque"},
+        {"hex": "#F0F0F0", "description": "Silvery-white micaceous scale"},
+        {"hex": "#8A2BE2", "description": "Violaceous (purple) hue of Lichen Planus"}
+      ],
+      "body_map": {
+        "elbows_knees_extensor": 80,
+        "scalp": 70,
+        "lower_back_sacral": 60,
+        "wrists_ankles_flexural": 50,
+        "oral_mucosa": 20
+      },
+      "visual_cues": {
+        "distribution": "Symmetrical. Psoriasis favors extensor surfaces. Lichen Planus favors flexural surfaces (wrists, ankles) and oral mucosa.",
+        "pattern": "Discrete plaques that can become confluent.",
+        "special_signs": "Auspitz sign (pinpoint bleeding on scale removal) & Koebner phenomenon (lesions at site of trauma) for Psoriasis. Wickham's striae for Lichen Planus."
+      },
+      "demographics": {
+        "age_peak": "Bimodal: 20-30 and 50-60 years (Psoriasis); 30-60 years (Lichen Planus)",
+        "sex_ratio": "M:F ≈ 1:1 (Psoriasis); F > M (Lichen Planus)"
+      },
+      "time_dynamics": {
+        "onset": "Chronic, relapsing-remitting course.",
+        "seasonality": "Psoriasis often worsens in winter and improves with sun."
+      },
+      "triggers": ["Stress", "Infection (e.g., strep throat)", "Skin injury (Koebner)", "Medications (beta-blockers, lithium)", "Alcohol"],
+      "red_flags": ["Erythroderma (>90% body surface area involvement)", "Pustular psoriasis", "Associated joint pain/swelling (psoriatic arthritis)"],
+      "confounder_questions": [
+        {
+          "question": "Are the patches thick, red, and covered with a silvery-white scale?",
+          "pairs_with": "Eczema",
+          "yes_supports": "Psoriasis",
+          "no_supports": "Eczema"
+        },
+        {
+          "question": "Are the patches mainly on extensor surfaces like elbows and knees?",
+          "pairs_with": "Eczema",
+          "yes_supports": "Psoriasis",
+          "no_supports": "Eczema"
+        },
+        {
+          "question": "Does the rash look like a ring with a clearing center and a scaly edge?",
+          "pairs_with": "Fungal (Tinea Corporis)",
+          "yes_supports": "Fungal (Tinea Corporis)",
+          "no_supports": "Psoriasis"
+        }
+      ],
+      "differential": [
+        {"disease": "Eczema (Atopic Dermatitis)", "distinguishing_feature": "Ill-defined borders, intense pruritus, flexural distribution, history of atopy."},
+        {"disease": "Seborrheic Dermatitis", "distinguishing_feature": "Greasy, yellowish scale in sebaceous areas (scalp, face), less demarcation."},
+        {"disease": "Fungal (Tinea Corporis)", "distinguishing_feature": "Annular (ring-shaped) with central clearing and an active, raised border."}
+      ],
+      "reference_images": {
+        "dermnet": ["https://dermnetnz.org/topics/plaque-psoriasis", "https://dermnetnz.org/topics/lichen-planus"],
+        "kaggle_dataset": "Psoriasis Pictures, Lichen Planus and related diseases"
+      }
+    },
+    {
+      "disease": "3. Eczema",
+      "synonyms": ["Atopic Dermatitis", "Contact Dermatitis", "Dyshidrotic Eczema", "Nummular Eczema", "Dermatitis"],
+      "icd11": ["EA80 - Atopic eczema", "EB00 - Allergic contact dermatitis", "EB01 - Irritant contact dermatitis"],
+      "lesion_morphology": {
+        "primary": ["Erythematous patch/plaque", "Papules", "Vesicles (especially acute/dyshidrotic)"],
+        "secondary": ["Lichenification (thickened skin from scratching)", "Excoriations", "Fissures", "Oozing and crusting"],
+        "border": "Ill-defined, indistinct borders that blend into normal skin.",
+        "texture": "Dry, scaly, rough. Acutely can be weepy/bubbly. Chronically can be thickened/leathery.",
+        "key_distinctions": "The hallmark is poorly demarcated erythema with significant pruritus (itch). Presentation varies by subtype: flexural in atopic, geometric/patterned in contact, coin-shaped in nummular, vesicles on hands/feet in dyshidrotic."
+      },
+      "colors": [
+        {"hex": "#F08080", "description": "Pink to red erythema"},
+        {"hex": "#A9A9A9", "description": "Grayish hue of lichenification"},
+        {"hex": "#DAA520", "description": "Yellowish serous crust from oozing"}
+      ],
+      "body_map": {
+        "flexural_areas_antecubital_popliteal": 85,
+        "hands_feet": 60,
+        "face_neck": 50,
+        "trunk_extremities_nummular": 40
+      },
+      "visual_cues": {
+        "distribution": "Classic flexural involvement (creases of elbows, knees) in atopic. Can be anywhere depending on subtype.",
+        "pattern": "Diffuse patches (atopic), geometric shapes (contact), or coin-shaped (nummular).",
+        "special_signs": "Dennie-Morgan lines (infraorbital folds), hyperlinear palms."
+      },
+      "demographics": {
+        "age_peak": "Typically starts in childhood (<5 years), can persist or appear in adults.",
+        "sex_ratio": "M:F ≈ 1:1"
+      },
+      "time_dynamics": {
+        "onset": "Chronic, relapsing-remitting course. Often associated with personal/family history of asthma, hay fever (atopic triad).",
+        "seasonality": "Often worse in dry, cold winter months."
+      },
+      "triggers": ["Dry skin", "Irritants (soaps, detergents)", "Allergens (pollen, dust mites, nickel)", "Stress", "Sweating", "Certain foods"],
+      "red_flags": ["Sudden worsening with widespread vesicles or pustules (may indicate secondary bacterial or viral infection, e.g., eczema herpeticum).", "Failure to thrive in infants.", "Erythroderma."],
+      "confounder_questions": [
+        {
+          "question": "Are the borders of the rash blurry and ill-defined?",
+          "pairs_with": "Psoriasis",
+          "yes_supports": "Eczema",
+          "no_supports": "Psoriasis"
+        },
+        {
+          "question": "Is the rash located in flexural areas like the crooks of your elbows or backs of your knees?",
+          "pairs_with": "Psoriasis",
+          "yes_supports": "Eczema",
+          "no_supports": "Psoriasis"
+        },
+        {
+          "question": "Do you or your close family members have a history of asthma or hay fever?",
+          "pairs_with": "Psoriasis",
+          "yes_supports": "Eczema",
+          "no_supports": "Psoriasis"
+        }
+      ],
+      "differential": [
+        {"disease": "Psoriasis", "distinguishing_feature": "Well-demarcated plaques, silvery scale, less itch, extensor distribution."},
+        {"disease": "Fungal (Tinea)", "distinguishing_feature": "Annular shape, central clearing, active border, confirmed by KOH test."},
+        {"disease": "Scabies", "distinguishing_feature": "Intense nocturnal itch, burrows in web spaces, household contacts affected."}
+      ],
+      "reference_images": {
+        "dermnet": ["https://dermnetnz.org/topics/atopic-dermatitis", "https://dermnetnz.org/topics/contact-dermatitis"],
+        "kaggle_dataset": "Eczema Photos"
+      }
+    },
+    {
+      "disease": "4. STDs",
+      "synonyms": ["Sexually Transmitted Disease", "Herpes Simplex Virus (HSV)", "Human Papillomavirus (HPV)", "Syphilis", "Chancroid"],
+      "icd11": ["1E90 - Herpes simplex", "1E61 - Anogenital warts (HPV)", "1A60 - Syphilis"],
+      "lesion_morphology": {
+        "primary": ["Vesicle (HSV)", "Verrucous Papule/Plaque (HPV)", "Chancre/Ulcer (Syphilis)", "Maculopapular rash (Secondary Syphilis)"],
+        "secondary": ["Erosion/Ulcer (post-vesicle HSV)", "Crusting", "Condyloma lata (Syphilis)"],
+        "border": "Variable: well-demarcated vesicles (HSV), irregular (HPV), indurated/defined (Syphilitic chancre).",
+        "texture": "Bubbly (vesicles), firm/cauliflower-like (warts), firm/rubbery (chancre).",
+        "key_distinctions": "HSV: Grouped painful vesicles on an erythematous base. HPV: Flesh-colored to pink verrucous (warty) papules. Syphilis: Painless, indurated chancre (primary) or a non-pruritic, coppery rash including palms/soles (secondary)."
+      },
+      "colors": [
+        {"hex": "#FF4C4C", "description": "Erythematous base of herpes"},
+        {"hex": "#E6BE8A", "description": "Flesh-colored or pinkish warts (HPV)"},
+        {"hex": "#CD853F", "description": "Copper-colored rash of secondary syphilis"}
+      ],
+      "body_map": {
+        "anogenital_region": 95,
+        "oral_perioral_region": 70,
+        "palms_soles_syphilis": 60,
+        "trunk": 40
+      },
+      "visual_cues": {
+        "distribution": "Typically localized to site of contact (anogenital, oral). Secondary syphilis is widespread.",
+        "pattern": "Grouped/clustered vesicles (HSV), scattered or confluent papules (HPV), solitary ulcer (primary syphilis), symmetric rash (secondary syphilis).",
+        "special_signs": "Involvement of palms and soles is a classic sign of secondary syphilis."
+      },
+      "demographics": {
+        "age_peak": "15-35 years (sexually active population).",
+        "sex_ratio": "Variable by disease and population."
+      },
+      "time_dynamics": {
+        "onset": "Acute onset following exposure. HSV is classically recurrent/latent. Syphilis progresses in stages if untreated.",
+        "seasonality": "None."
+      },
+      "triggers": ["Sexual contact", "Skin-to-skin contact", "Stress or immunosuppression can trigger HSV recurrence."],
+      "red_flags": ["Systemic symptoms (fever, malaise)", "Neurologic or ocular symptoms (neurosyphilis, ocular herpes)", "Suspicion of co-infection with HIV."],
+      "confounder_questions": [
+        {
+          "question": "Are the lesions painful, clustered blisters or vesicles?",
+          "pairs_with": "Syphilis",
+          "yes_supports": "Herpes Simplex Virus (HSV)",
+          "no_supports": "Syphilis"
+        },
+        {
+          "question": "Is there a single, firm, painless ulcer?",
+          "pairs_with": "Herpes Simplex Virus (HSV)",
+          "yes_supports": "Syphilis",
+          "no_supports": "Herpes Simplex Virus (HSV)"
+        },
+        {
+          "question": "Have you noticed a widespread rash that also involves the palms of your hands and soles of your feet?",
+          "pairs_with": "Herpes Simplex Virus (HSV)",
+          "yes_supports": "Syphilis",
+          "no_supports": "Herpes Simplex Virus (HSV)"
+        }
+      ],
+      "differential": [
+        {"disease": "Aphthous Ulcers (Canker Sores)", "distinguishing_feature": "Painful ulcers only inside the mouth on non-keratinized mucosa, not preceded by vesicles."},
+        {"disease": "Molluscum Contagiosum", "distinguishing_feature": "Small, dome-shaped papules with central umbilication."},
+        {"disease": "Behcet's Disease", "distinguishing_feature": "Recurrent, painful oral and genital ulcers plus other systemic signs (uveitis, skin lesions)."}
+      ],
+      "reference_images": {
+        "dermnet": ["https://dermnetnz.org/topics/herpes-simplex", "https://dermnetnz.org/topics/syphilis"],
+        "kaggle_dataset": "Herpes, HPV, and other STDs Photos"
+      }
+    },
+    {
+      "disease": "5. Fungal",
+      "synonyms": ["Dermatophytosis", "Tinea", "Ringworm", "Candidiasis", "Thrush", "Yeast Infection"],
+      "icd11": ["1F27 - Tinea corporis", "1F21 - Tinea pedis", "1F24 - Tinea cruris", "1F20 - Tinea capitis", "1F2F - Candidosis of skin or nail"],
+      "lesion_morphology": {
+        "primary": ["Annular patch/plaque with scale", "Pustules", "Erythematous patch"],
+        "secondary": ["Central clearing", "Maceration (in skin folds)", "Satellite pustules/papules"],
+        "border": "Sharply demarcated, active, raised border (Tinea); ill-defined with satellite lesions (Candidiasis).",
+        "texture": "Scaly, sometimes with tiny vesicles or pustules at the active edge.",
+        "key_distinctions": "Tinea ('Ringworm'): Annular (ring-shaped) lesion with central clearing and an active, scaling border. Candidiasis: Bright red erythema in skin folds (intertrigo) with characteristic satellite papules/pustules."
+      },
+      "colors": [
+        {"hex": "#EE4B2B", "description": "Beefy red erythema (Candidiasis)"},
+        {"hex": "#FF6347", "description": "Red to pink active border (Tinea)"},
+        {"hex": "#F5F5F5", "description": "Fine white scale"}
+      ],
+      "body_map": {
+        "feet_tinea_pedis": 70,
+        "groin_tinea_cruris": 60,
+        "body_trunk_limbs_tinea_corporis": 50,
+        "skin_folds_candidiasis": 40,
+        "scalp_tinea_capitis": 30
+      },
+      "visual_cues": {
+        "distribution": "Asymmetric. Tinea is named by location (pedis=feet, cruris=groin). Candidiasis favors moist, occluded areas (inframammary, groin, axillae).",
+        "pattern": "Annular with central clearing is classic for Tinea. Satellite lesions are classic for Candidiasis.",
+        "special_signs": "A 'leading edge' of scale is highly suggestive of a dermatophyte infection."
+      },
+      "demographics": {
+        "age_peak": "Any age. Tinea capitis common in children. Tinea pedis/cruris in young adults. Candidiasis common in infants (diaper) and immunocompromised.",
+        "sex_ratio": "M > F for Tinea cruris/pedis."
+      },
+      "time_dynamics": {
+        "onset": "Subacute, slowly expanding over weeks.",
+        "seasonality": "Worse in hot, humid weather."
+      },
+      "triggers": ["Moisture, sweat, occlusion", "Communal showers, gyms", "Immunosuppression (diabetes, HIV)", "Broad-spectrum antibiotic use (for Candidiasis)"],
+      "red_flags": ["Widespread infection in an immunocompromised patient.", "Kerion formation (inflammatory, boggy mass) in tinea capitis.", "Failure to respond to topical antifungals (may be incorrect diagnosis or resistant organism)."],
+      "confounder_questions": [
+        {
+          "question": "Does the rash have a distinct ring-like shape with a clearing center and a scaly, active border?",
+          "pairs_with": "Eczema",
+          "yes_supports": "Fungal",
+          "no_supports": "Eczema"
+        },
+        {
+          "question": "Is the rash bright red, located in a skin fold (like under the breasts or in the groin), and surrounded by smaller 'satellite' spots?",
+          "pairs_with": "Eczema",
+          "yes_supports": "Fungal",
+          "no_supports": "Eczema"
+        },
+        {
+          "question": "Did the rash get significantly worse after applying a steroid cream (like hydrocortisone)?",
+          "pairs_with": "Eczema",
+          "yes_supports": "Fungal",
+          "no_supports": "Eczema"
+        }
+      ],
+      "differential": [
+        {"disease": "Eczema (Nummular)", "distinguishing_feature": "Coin-shaped but typically lacks central clearing and has a weepy/crusted surface, not a scaling edge."},
+        {"disease": "Psoriasis", "distinguishing_feature": "Thicker, silvery scale, not annular, typically symmetrical on extensor surfaces."},
+        {"disease": "Erythrasma", "distinguishing_feature": "Well-demarcated brown-red patches in skin folds, fluoresces coral-red under Wood's lamp."}
+      ],
+      "reference_images": {
+        "dermnet": ["https://dermnetnz.org/topics/dermatophyte-infection", "https://dermnetnz.org/topics/cutaneous-candidiasis"],
+        "kaggle_dataset": "Tinea Ringworm Candidiasis and other Fungal Infections"
+      }
+    },
+    {
+      "disease": "6. BCC",
+      "synonyms": ["Basal Cell Carcinoma", "Rodent Ulcer", "Actinic Keratosis (AK)", "Solar Keratosis", "Pre-cancer"],
+      "icd11": ["2C31 - Basal cell carcinoma of skin", "EK90 - Actinic keratosis"],
+      "lesion_morphology": {
+        "primary": ["Papule or Nodule (BCC)", "Erythematous Macule or Papule with scale (AK)"],
+        "secondary": ["Ulceration (central)", "Crusting", "Telangiectasia"],
+        "border": "Pearly, rolled, translucent border (BCC); ill-defined (AK).",
+        "texture": "Waxy/pearly (BCC); rough, scaly, sandpaper-like (AK).",
+        "key_distinctions": "BCC: Pearly papule with surface telangiectasias and often a rolled border, may have central ulceration. AK: A pre-cancerous lesion that feels like a rough, dry, sandpaper-like spot on sun-exposed skin."
+      },
+      "colors": [
+        {"hex": "#FADADD", "description": "Pearly pink or skin-colored (BCC)"},
+        {"hex": "#DC143C", "description": "Reddish color of telangiectasias"},
+        {"hex": "#F08080", "description": "Erythematous base of Actinic Keratosis"}
+      ],
+      "body_map": {
+        "face_nose_ears": 90,
+        "scalp_bald_spot": 70,
+        "dorsal_hands_forearms": 60,
+        "neck_upper_chest": 50
+      },
+      "visual_cues": {
+        "distribution": "Almost exclusively on sun-exposed areas of the body.",
+        "pattern": "Typically solitary lesions, but fields of multiple AKs ('field cancerization') are common.",
+        "special_signs": "A sore that bleeds, heals, and then recurs in the same spot is highly suspicious for BCC."
+      },
+      "demographics": {
+        "age_peak": "Increasingly common after age 40, peak in 60s-80s.",
+        "sex_ratio": "M > F, likely due to cumulative sun exposure.",
+        "skin_type": "Much more common in fair-skinned individuals (Fitzpatrick I-II)."
+      },
+      "time_dynamics": {
+        "onset": "Very slow growing over months to years.",
+        "seasonality": "None."
+      },
+      "triggers": ["Chronic cumulative sun (UV) exposure is the primary cause."],
+      "red_flags": ["Rapid growth", "Pain or numbness (perineural invasion)", "Large size (>2cm)", "Location in high-risk 'H-zone' of face (around eyes, nose, lips, ears)."],
+      "confounder_questions": [
+        {
+          "question": "Does the spot have a shiny, pearly, or translucent appearance with tiny blood vessels visible on the surface?",
+          "pairs_with": "Seborrheic Keratosis",
+          "yes_supports": "BCC",
+          "no_supports": "Seborrheic Keratosis"
+        },
+        {
+          "question": "Is it a sore or pimple that bleeds, scabs over, but never fully heals?",
+          "pairs_with": "Seborrheic Keratosis",
+          "yes_supports": "BCC",
+          "no_supports": "Seborrheic Keratosis"
+        },
+        {
+          "question": "Does the spot feel rough and dry like sandpaper when you run your finger over it?",
+          "pairs_with": "BCC",
+          "yes_supports": "Actinic Keratosis (AK)",
+          "no_supports": "BCC"
+        }
+      ],
+      "differential": [
+        {"disease": "Seborrheic Keratosis", "distinguishing_feature": "'Stuck-on' appearance, waxy/warty texture, no ulceration or telangiectasias."},
+        {"disease": "Squamous Cell Carcinoma (SCC)", "distinguishing_feature": "Often arises from AK, but is typically a firmer, more crusted or ulcerated nodule that grows faster than a BCC."},
+        {"disease": "Melanoma (Nodular)", "distinguishing_feature": "Typically pigmented (brown/black), grows more rapidly."}
+      ],
+      "reference_images": {
+        "dermnet": ["https://dermnetnz.org/topics/basal-cell-carcinoma", "https://dermnetnz.org/topics/actinic-keratosis"],
+        "kaggle_dataset": "Basal Cell Carcinoma and other Malignant Lesions"
+      }
+    },
+    {
+      "disease": "7. Seborrheic Keratosis",
+      "synonyms": ["SK", "Seborrheic Wart", "Senile Wart", "Benign Tumor", "Barnacle"],
+      "icd11": ["EK70 - Seborrhoeic keratosis"],
+      "lesion_morphology": {
+        "primary": ["Papule", "Plaque"],
+        "secondary": ["Keratin plugs (horn cysts)"],
+        "border": "Sharply demarcated, appears 'stuck-on' the skin.",
+        "texture": "Waxy, verrucous (warty), greasy, or velvety. Can be smooth or very rough.",
+        "key_distinctions": "The single most important feature is the 'stuck-on' appearance, as if it could be picked off. They often have a warty surface with visible keratin-filled pits (horn cysts)."
+      },
+      "colors": [
+        {"hex": "#F5DEB3", "description": "Tan / Light brown"},
+        {"hex": "#8B4513", "description": "Medium to dark brown"},
+        {"hex": "#2C2C2C", "description": "Black"}
+      ],
+      "body_map": {
+        "trunk_back_chest": 80,
+        "face_temples": 70,
+        "extremities": 50
+      },
+      "visual_cues": {
+        "distribution": "Can be anywhere except palms, soles, and mucous membranes. Often numerous.",
+        "pattern": "Scattered, discrete lesions.",
+        "special_signs": "Sign of Leser-Trélat: sudden eruption of numerous SKs, can be a sign of internal malignancy (rare)."
+      },
+      "demographics": {
+        "age_peak": "Very common after age 40, prevalence increases with age.",
+        "sex_ratio": "M:F ≈ 1:1"
+      },
+      "time_dynamics": {
+        "onset": "Slow growing over years. Patient often has multiple lesions of varying ages.",
+        "seasonality": "None."
+      },
+      "triggers": ["Genetics and age are the primary factors. Friction can irritate them."],
+      "red_flags": ["Sudden eruption of many lesions (Leser-Trélat sign).", "A lesion that is bleeding, itching, or rapidly changing (could be an irritated SK or a misdiagnosed melanoma)."],
+      "confounder_questions": [
+        {
+          "question": "Does the growth look like it was pasted or 'stuck on' the surface of the skin?",
+          "pairs_with": "Melanoma",
+          "yes_supports": "Seborrheic Keratosis",
+          "no_supports": "Melanoma"
+        },
+        {
+          "question": "Is the surface waxy, warty, or crumbly?",
+          "pairs_with": "BCC",
+          "yes_supports": "Seborrheic Keratosis",
+          "no_supports": "BCC"
+        },
+        {
+          "question": "Is the spot a uniform color (tan, brown, or black) and has been stable for a long time?",
+          "pairs_with": "Melanoma",
+          "yes_supports": "Seborrheic Keratosis",
+          "no_supports": "Melanoma"
+        }
+      ],
+      "differential": [
+        {"disease": "Melanoma", "distinguishing_feature": "The most important differential. Melanoma may have color variegation, irregular borders, and a history of change. An SK is typically uniform and stable. A biopsy is definitive if there is any doubt."},
+        {"disease": "Actinic Keratosis", "distinguishing_feature": "AKs are flat, feel like sandpaper, and are on sun-exposed skin. SKs are raised and 'stuck-on'."},
+        {"disease": "Pigmented Basal Cell Carcinoma", "distinguishing_feature": "Pigmented BCCs will still have other BCC features like a pearly, rolled border and telangiectasias, which SKs lack."}
+      ],
+      "reference_images": {
+        "dermnet": ["https://dermnetnz.org/topics/seborrhoeic-keratosis"],
+        "kaggle_dataset": "Seborrheic Keratosis and other Benign Tumors"
+      }
+    }
+  ]
+}
