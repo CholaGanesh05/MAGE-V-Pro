@@ -161,5 +161,3 @@ Email: [vpscholachetan24@gmail.com](mailto:vpscholachetan24@gmail.com)
 ---
 
 *Note: This paper is accepted for publication in **Procedia Computer Science** (Elsevier) and presented at the **Eighth International Conference on Futuristic Trends in Networks and Computing Technologies (FTNCT-08)**. See `Presenter Certificate - FTNCT'08.pdf` for verification.*
-
-```
