@@ -1,8 +1,3 @@
-Based on the directory structure you provided, I have integrated the `Project Structure` section and embedded the corresponding images into the `Results` section.
-
-Here is the complete, updated `README.md` file ready for your GitHub repository.
-
-```markdown
 # MAGE-V-Pro: An Open and Reproducible Multimodal AI Framework for Skin Disease Diagnosis
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -212,7 +207,3 @@ For questions or collaboration inquiries:
 ---
 
 Note: This paper is accepted for publication in **Procedia Computer Science** (Elsevier) at the **Eighth International Conference on Future Trends in Networking and Computing Technologies (FTNCT-08)**. See `Presenter Certificate - FTNCT'08.pdf` for verification.
-
-```
-
-```
